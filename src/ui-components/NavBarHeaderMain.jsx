@@ -48,7 +48,7 @@ export default function NavBarHeaderMain(props) {
         display="flex"
         gap="20px"
         direction="row"
-        width="1036px"
+        width="70%"
         height="unset"
         justifyContent="center"
         alignItems="center"
