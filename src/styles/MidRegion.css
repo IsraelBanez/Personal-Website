@@ -1,0 +1,16 @@
+.regular {
+    color: rgba(65,69,78,1);
+}
+
+.active,
+.regular:hover {
+    color: #73C4FF !important;
+
+}
+ 
+  
+  
+  
+  
+  
+  

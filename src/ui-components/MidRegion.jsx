@@ -5,10 +5,24 @@
  **************************************************************************/
 
 /* eslint-disable */
-import * as React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import '../styles/MidRegion.css';
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Text } from "@aws-amplify/ui-react";
 export default function MidRegion(props) {
+  const navigate = useNavigate();
+  const [activeLink, setActiveLink] = useState(null);
+
+  /*When Directories are clicked, they change color */
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+    navigate(link)
+  };
+  const isLinkActive = (link) => {
+    return link === activeLink;
+  };
+  
   const { overrides, ...rest } = props;
   return (
     <Flex
@@ -38,6 +52,8 @@ export default function MidRegion(props) {
         {...getOverrideProps(overrides, "Directories10668")}
       >
         <Text
+          className={isLinkActive("/home") ? "active" : "regular"}
+          onClick={() => handleLinkClick("/home")}
           fontFamily="Ubuntu Mono"
           fontSize="20px"
           fontWeight="400"
@@ -73,6 +89,8 @@ export default function MidRegion(props) {
         {...getOverrideProps(overrides, "Directories10670")}
       >
         <Text
+          className={isLinkActive("/about") ? "active" : "regular"}
+          onClick={() => handleLinkClick("/about")}
           fontFamily="Ubuntu Mono"
           fontSize="20px"
           fontWeight="400"
@@ -108,6 +126,8 @@ export default function MidRegion(props) {
         {...getOverrideProps(overrides, "Directories10672")}
       >
         <Text
+          className={isLinkActive("/projects") ? "active" : "regular"}
+          onClick={() => handleLinkClick("/projects")}
           fontFamily="Ubuntu Mono"
           fontSize="20px"
           fontWeight="400"
@@ -143,6 +163,8 @@ export default function MidRegion(props) {
         {...getOverrideProps(overrides, "Directories10674")}
       >
         <Text
+          className={isLinkActive("/contact") ? "active" : "regular"}
+          onClick={() => handleLinkClick("/contact")}
           fontFamily="Ubuntu Mono"
           fontSize="20px"
           fontWeight="400"
