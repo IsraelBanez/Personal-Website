@@ -14,14 +14,14 @@ export default function Menu(props) {
     <Flex
       gap="5px"
       direction="row"
-      width="119px"
+      width="100px"
       height="35px"
-      justifyContent="center"
+      justifyContent="flex-end"
       alignItems="center"
       overflow="hidden"
       position="relative"
       borderRadius="10px"
-      padding="5px 5px 5px 5px"
+      padding="5px 0px 5px 0px"
       {...getOverrideProps(overrides, "Menu")}
       {...rest}
     >
@@ -35,7 +35,7 @@ export default function Menu(props) {
         display="block"
         direction="column"
         justifyContent="unset"
-        width="65px"
+        width="unset"
         height="unset"
         gap="unset"
         alignItems="unset"

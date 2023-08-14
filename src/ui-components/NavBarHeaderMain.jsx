@@ -6,10 +6,11 @@
 
 /* eslint-disable */
 import * as React from "react";
+import '../styles/NavBarHeaderMain.css';
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import Logo from "./Logo";
 import MidRegion from "./MidRegion";
-import  MenuCustom from "./Menu";
+import MenuCustom from "./Menu";
 import { Flex } from "@aws-amplify/ui-react";
 export default function NavBarHeaderMain(props) {
   const { overrides, ...rest } = props;
@@ -17,7 +18,8 @@ export default function NavBarHeaderMain(props) {
     <Flex
       gap="40px"
       direction="row"
-      width="unset"
+      width="100%"
+      minWidth="800px"
       height="unset"
       justifyContent="flex-start"
       alignItems="center"
@@ -37,7 +39,7 @@ export default function NavBarHeaderMain(props) {
         height="50px"
         justifyContent="center"
         alignItems="center"
-        shrink="0"
+        shrink="1"
         position="relative"
         padding="5px 0px 5px 0px"
         {...getOverrideProps(overrides, "Logo")}
@@ -46,12 +48,12 @@ export default function NavBarHeaderMain(props) {
         display="flex"
         gap="20px"
         direction="row"
-        width="950px"
+        width="1036px"
         height="unset"
         justifyContent="center"
         alignItems="center"
         overflow="hidden"
-        shrink="0"
+        shrink="1"
         position="relative"
         padding="5px 0px 5px 0px"
         {...getOverrideProps(overrides, "Mid Region")}
@@ -64,7 +66,7 @@ export default function NavBarHeaderMain(props) {
         justifyContent="flex-end"
         alignItems="center"
         overflow="hidden"
-        shrink="0"
+        shrink="1"
         position="relative"
         padding="5px 0px 5px 0px"
         {...getOverrideProps(overrides, "Right Region")}
@@ -73,14 +75,15 @@ export default function NavBarHeaderMain(props) {
           display="flex"
           gap="5px"
           direction="row"
-          width="119px"
+          width="100px"
           height="35px"
-          justifyContent="center"
+          justifyContent="flex-end"
           alignItems="center"
-          shrink="0"
+          overflow="hidden"
+          shrink="1"
           position="relative"
           borderRadius="10px"
-          padding="5px 5px 5px 5px"
+          padding="5px 0px 5px 0px"
           {...getOverrideProps(overrides, "Menu")}
         ></MenuCustom>
       </Flex>
