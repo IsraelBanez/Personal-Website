@@ -5,6 +5,7 @@
  **************************************************************************/
 
 /* eslint-disable */
+
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Text } from "@aws-amplify/ui-react";
@@ -24,28 +25,48 @@ export default function Logo(props) {
       {...rest}
     >
       <Text
-        fontFamily="Baloo"
+        fontFamily="Ubuntu"
         fontSize="35px"
-        fontWeight="400"
-        color="rgba(65,69,78,1)"
+        fontWeight="500"
+        color="#7EEF90"
         lineHeight="24px"
         textAlign="center"
-        display="block"
-        direction="column"
-        justifyContent="unset"
-        width="unset"
-        height="unset"
-        gap="unset"
-        alignItems="unset"
-        grow="1"
-        shrink="1"
-        basis="0"
-        position="relative"
-        padding="0px 0px 0px 0px"
-        whiteSpace="pre-wrap"
-        children="israel-banez:~$"
+        padding= "0px 3.5px 0px 0px"
+        children="israel-banez"
         {...getOverrideProps(overrides, "israel-banez:~$")}
       ></Text>
+      <Text
+        fontFamily="Ubuntu"
+        fontSize="35px"
+        fontWeight="500"
+        color="#41454E"
+        lineHeight="24px"
+        textAlign="center"
+        padding= "0px 3.5px 0px 0px"
+        children=":"
+      {...getOverrideProps(overrides, "israel-banez:~$-1")}>
+      </Text>
+      <Text
+        fontFamily="Ubuntu"
+        fontSize="35px"
+        fontWeight="500"
+        color="#73C4FF"
+        lineHeight="24px"
+        textAlign="center"
+        padding= "0px 3.5px 0px 0px"
+        children="~"
+      {...getOverrideProps(overrides, "israel-banez:~$-2")}>
+      </Text>
+      <Text
+        fontFamily="Ubuntu"
+        fontSize="35px"
+        fontWeight="500"
+        color="#41454E"
+        lineHeight="24px"
+        textAlign="center"
+        children="$"
+      {...getOverrideProps(overrides, "israel-banez:~$-3")}>
+      </Text>
     </Flex>
   );
 }
