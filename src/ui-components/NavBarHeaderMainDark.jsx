@@ -6,35 +6,34 @@
 
 /* eslint-disable */
 import * as React from "react";
-import '../styles/NavBarHeaderMain.css';
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import Logo from "./Logo";
 import MidRegion from "./MidRegion";
-import  MenuCustom  from "./Menu";
+import MenuCustom  from "./Menu";
 import { Flex } from "@aws-amplify/ui-react";
-export default function NavBarHeaderMain(props) {
+export default function NavBarHeaderMainDark(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
       gap="40px"
       direction="row"
-      width="100%"
-      height="auto"
+      width="unset"
+      height="unset"
       justifyContent="flex-start"
       alignItems="center"
       overflow="hidden"
       position="relative"
       boxShadow="0px 2px 6px rgba(0, 0, 0, 0.25)"
       padding="20px 30px 20px 30px"
-      backgroundColor="rgba(255,255,255,1)"
-      {...getOverrideProps(overrides, "NavBarHeaderMain")}
+      backgroundColor="rgba(65,69,78,1)"
+      {...getOverrideProps(overrides, "NavBarHeaderMainDark")}
       {...rest}
     >
       <Logo
         display="flex"
         gap="1px"
         direction="row"
-        width="15%"
+        width="260px"
         height="50px"
         justifyContent="center"
         alignItems="center"
@@ -47,7 +46,7 @@ export default function NavBarHeaderMain(props) {
         display="flex"
         gap="20px"
         direction="row"
-        width="65%"
+        width="1036px"
         height="unset"
         justifyContent="center"
         alignItems="center"
@@ -60,7 +59,7 @@ export default function NavBarHeaderMain(props) {
       <Flex
         gap="10px"
         direction="row"
-        width="15%"
+        width="100px"
         height="unset"
         justifyContent="flex-end"
         alignItems="center"

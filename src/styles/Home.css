@@ -1,0 +1,33 @@
+.home-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.about-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-container{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.icon-container img{
+    object-fit: scale-down;
+    image-rendering: optimizeQuality;
+    width: 45px;
+    height: 54px;
+}

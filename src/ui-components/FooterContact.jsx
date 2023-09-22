@@ -5,59 +5,43 @@
  **************************************************************************/
 
 /* eslint-disable */
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import '../styles/MidRegion.css';
+import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Text } from "@aws-amplify/ui-react";
-export default function MidRegion(props) {
-  const navigate = useNavigate();
-  const [activeLink, setActiveLink] = useState(null);
-
-  /*When Directories are clicked, they change color */
-  const handleLinkClick = (link) => {
-    setActiveLink(link);
-    navigate(link)
-  };
-  const isLinkActive = (link) => {
-    return link === activeLink;
-  };
-  
+export default function FooterContact(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
-      gap="20px"
-      direction="row"
-      width="1036px"
+      gap="10px"
+      direction="column"
+      width="600px"
       height="unset"
       justifyContent="center"
       alignItems="center"
       overflow="hidden"
       position="relative"
-      padding="5px 0px 5px 0px"
-      {...getOverrideProps(overrides, "MidRegion")}
+      padding="10px 10px 10px 10px"
+      {...getOverrideProps(overrides, "FooterContact")}
       {...rest}
     >
       <Flex
-        gap="5px"
-        direction="row"
-        width="96px"
+        gap="0"
+        direction="column"
+        width="unset"
         height="unset"
         justifyContent="center"
         alignItems="center"
         overflow="hidden"
         shrink="0"
         position="relative"
-        padding="5px 5px 5px 5px"
-        {...getOverrideProps(overrides, "Directories10668")}
+        padding="10px 5px 10px 5px"
+        {...getOverrideProps(overrides, "Directories12391")}
       >
         <Text
-          className={isLinkActive("/home") ? "active" : "regular"}
-          onClick={() => handleLinkClick("/home")}
           fontFamily="Ubuntu Mono"
-          fontSize="20px"
-          fontWeight="400"
-          color="rgba(65,69,78,1)"
+          fontSize="28px"
+          fontWeight="700"
+          color="rgba(255,255,255,1)"
           lineHeight="24px"
           textAlign="center"
           display="block"
@@ -71,14 +55,35 @@ export default function MidRegion(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="/home"
-          {...getOverrideProps(overrides, "/home")}
+          children="Available for select opportunities"
+          {...getOverrideProps(overrides, "/home12392")}
+        ></Text>
+        <Text
+          fontFamily="Ubuntu Mono"
+          fontSize="20px"
+          fontWeight="400"
+          color="rgba(126,239,144,1)"
+          lineHeight="24px"
+          textAlign="center"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
+          shrink="0"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Contact me!"
+          {...getOverrideProps(overrides, "/home124210")}
         ></Text>
       </Flex>
       <Flex
-        gap="5px"
-        direction="row"
-        width="96px"
+        gap="0"
+        direction="column"
+        width="unset"
         height="unset"
         justifyContent="center"
         alignItems="center"
@@ -86,15 +91,13 @@ export default function MidRegion(props) {
         shrink="0"
         position="relative"
         padding="5px 5px 5px 5px"
-        {...getOverrideProps(overrides, "Directories10670")}
+        {...getOverrideProps(overrides, "Directories124105")}
       >
         <Text
-          className={isLinkActive("/about") ? "active" : "regular"}
-          onClick={() => handleLinkClick("/about")}
           fontFamily="Ubuntu Mono"
           fontSize="20px"
           fontWeight="400"
-          color="rgba(65,69,78,1)"
+          color="rgba(255,255,255,1)"
           lineHeight="24px"
           textAlign="center"
           display="block"
@@ -108,14 +111,35 @@ export default function MidRegion(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="/about"
-          {...getOverrideProps(overrides, "/about")}
+          children="$ find ./email -name "
+          {...getOverrideProps(overrides, "/home124106")}
+        ></Text>
+        <Text
+          fontFamily="Ubuntu Mono"
+          fontSize="20px"
+          fontWeight="400"
+          color="rgba(246,106,106,1)"
+          lineHeight="24px"
+          textAlign="center"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
+          shrink="0"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="isbanez@calpoly.edu"
+          {...getOverrideProps(overrides, "/home12397")}
         ></Text>
       </Flex>
       <Flex
-        gap="5px"
-        direction="row"
-        width="96px"
+        gap="0"
+        direction="column"
+        width="unset"
         height="unset"
         justifyContent="center"
         alignItems="center"
@@ -123,15 +147,13 @@ export default function MidRegion(props) {
         shrink="0"
         position="relative"
         padding="5px 5px 5px 5px"
-        {...getOverrideProps(overrides, "Directories10672")}
+        {...getOverrideProps(overrides, "Directories124162")}
       >
         <Text
-          className={isLinkActive("/projects") ? "active" : "regular"}
-          onClick={() => handleLinkClick("/projects")}
           fontFamily="Ubuntu Mono"
           fontSize="20px"
           fontWeight="400"
-          color="rgba(65,69,78,1)"
+          color="rgba(255,255,255,1)"
           lineHeight="24px"
           textAlign="center"
           display="block"
@@ -145,30 +167,14 @@ export default function MidRegion(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="/projects"
-          {...getOverrideProps(overrides, "/project")}
+          children="$ find ./social-media -name "
+          {...getOverrideProps(overrides, "/home124163")}
         ></Text>
-      </Flex>
-      <Flex
-        gap="5px"
-        direction="row"
-        width="96px"
-        height="unset"
-        justifyContent="center"
-        alignItems="center"
-        overflow="hidden"
-        shrink="0"
-        position="relative"
-        padding="5px 5px 5px 5px"
-        {...getOverrideProps(overrides, "Directories10674")}
-      >
         <Text
-          className={isLinkActive("/contact") ? "active" : "regular"}
-          onClick={() => handleLinkClick("/contact")}
           fontFamily="Ubuntu Mono"
           fontSize="20px"
           fontWeight="400"
-          color="rgba(65,69,78,1)"
+          color="rgba(246,106,106,1)"
           lineHeight="24px"
           textAlign="center"
           display="block"
@@ -182,8 +188,29 @@ export default function MidRegion(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="/contact"
-          {...getOverrideProps(overrides, "/contact")}
+          children="github"
+          {...getOverrideProps(overrides, "/home124164")}
+        ></Text>
+        <Text
+          fontFamily="Ubuntu Mono"
+          fontSize="20px"
+          fontWeight="400"
+          color="rgba(246,106,106,1)"
+          lineHeight="24px"
+          textAlign="center"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
+          shrink="0"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="linkedin"
+          {...getOverrideProps(overrides, "/home124176")}
         ></Text>
       </Flex>
     </Flex>
